@@ -1,0 +1,25 @@
+﻿@page "/orderbook/{Symbol}"
+@using Radzen
+@using Radzen.Blazor
+@using Rcwowbagger.BlazorBook.Data
+
+@inherits ShowOrderbookBase
+
+
+
+@if (Symbol == null || TopOfBook == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <RadzenDataGrid Data="@TopOfBook" TItem="OrderbookView" @ref="grid">
+        <Columns>
+            <RadzenDataGridColumn TItem="OrderbookView" Property="BestBid" Title="Bid" />
+            <RadzenDataGridColumn TItem="OrderbookView" Property="BestAsk" Title="Ask" />
+        </Columns>
+    </RadzenDataGrid>
+
+   
+
+}
