@@ -16,7 +16,7 @@ builder.Logging.AddSerilog();
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddScoped<IOrderbookService, OrderbookService>();
+builder.Services.AddScoped<IOrderbookService, RedisOrderbookService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

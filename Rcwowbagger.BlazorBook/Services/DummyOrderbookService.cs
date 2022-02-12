@@ -3,7 +3,7 @@ namespace Rcwowbagger.BlazorBook.Services
 {
     using Rcwowbagger.BlazorBook.Models.Orderbooks;
     using Serilog;
-    public class OrderbookService : IOrderbookService
+    public class DummyOrderbookService : IOrderbookService
     {
         private readonly ILogger _logger;
         private readonly System.Timers.Timer _timer;
@@ -12,9 +12,9 @@ namespace Rcwowbagger.BlazorBook.Services
         public event OrderbookUpdateDelegate OnOrderbookUpdate;
 
 
-        public OrderbookService(IConfiguration configuration)
+        public DummyOrderbookService(IConfiguration configuration)
         {
-            _logger = Log.ForContext<OrderbookService>();
+            _logger = Log.ForContext<DummyOrderbookService>();
             _timer = new System.Timers.Timer()
             {
                 AutoReset = true,
