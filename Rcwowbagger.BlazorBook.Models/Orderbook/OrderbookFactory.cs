@@ -1,4 +1,6 @@
-﻿namespace Rcwowbagger.BlazorBook.Models.Orderbooks
+﻿using Rcwowbagger.BlazorBook.Models.Orderbooks;
+
+namespace Rcwowbagger.BlazorBook.Models.Orderbook
 {
     public static class OrderbookFactory
     {
@@ -10,7 +12,7 @@
             Enumerable.Range(0, 10).ToList().ForEach(x =>
             {
                 var bid = GenerateOrder(orderbook.Symbol, Side.Bid, 10);
-                orderbook.Bids.TryAdd(bid.Price,bid);
+                orderbook.Bids.TryAdd(bid.Price, bid);
                 var ask = GenerateOrder(orderbook.Symbol, Side.Ask, 10);
                 orderbook.Asks.TryAdd(ask.Price, ask);
 
@@ -24,7 +26,7 @@
             var order = new Order()
             {
                 Side = side,
-                Price = Convert.ToDecimal( side == Side.Bid ? reference - _random.NextDouble() : _random.NextDouble() + reference),
+                Price = Convert.ToDecimal(side == Side.Bid ? reference - _random.NextDouble() : _random.NextDouble() + reference),
                 Quantity = 1,
                 Symbol = symbol
             };
