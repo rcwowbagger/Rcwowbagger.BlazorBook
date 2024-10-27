@@ -1,7 +1,6 @@
-﻿using Rcwowbagger.BlazorBook.Models.Orderbooks;
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
 
-namespace Rcwowbagger.BlazorBook.Models.Orderbook;
+namespace Rcwowbagger.BlazorBook.Models;
 
 public class Orderbook
 {

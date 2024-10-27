@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rcwowbagger.BlazorBook", "rcwowbagger.BlazorBook\Rcwowbagger.BlazorBook.csproj", "{6B9A952E-816B-4728-A9A0-28914A0A0D97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rcwowbagger.BlazorBook", "rcwowbagger.BlazorBook\Rcwowbagger.BlazorBook.csproj", "{6B9A952E-816B-4728-A9A0-28914A0A0D97}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rcwowbagger.BlazorBook.Models", "Rcwowbagger.BlazorBook.Models\Rcwowbagger.BlazorBook.Models.csproj", "{99BA46C0-45FC-40A5-A8A0-0DF37E42028D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rcwowbagger.Traderview", "Rcwowbagger.Traderview\Rcwowbagger.Traderview.csproj", "{64F02F3E-67F8-4052-A1C8-3F4B33FAA024}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{99BA46C0-45FC-40A5-A8A0-0DF37E42028D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99BA46C0-45FC-40A5-A8A0-0DF37E42028D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99BA46C0-45FC-40A5-A8A0-0DF37E42028D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F02F3E-67F8-4052-A1C8-3F4B33FAA024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F02F3E-67F8-4052-A1C8-3F4B33FAA024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F02F3E-67F8-4052-A1C8-3F4B33FAA024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F02F3E-67F8-4052-A1C8-3F4B33FAA024}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
