@@ -1,8 +1,7 @@
-﻿namespace Rcwowbagger.BlazorBook.Models
+﻿namespace Rcwowbagger.BlazorBook.Models;
+
+public enum Side
 {
-    public enum Side
-    {
-        Bid = 0,
-        Ask = 1
-    }
+    Bid = 0,
+    Ask = 1
 }

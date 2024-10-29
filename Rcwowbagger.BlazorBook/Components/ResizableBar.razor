@@ -5,10 +5,12 @@
 <style>
     .resizable-bar-container {
         width: 100%;
-        height: 20px; /* Default height; can adjust if needed */
+        height: 25px; /* Default height; can adjust if needed */
         position: relative;
         overflow: hidden;
-        border-radius: 5px;
+        border-radius: 0;
+        padding: 0; /* Remove any default padding */
+        margin: 0; /* Remove any default margin */
     }
 
     .resizable-bar {
@@ -16,6 +18,8 @@
         position: absolute;
         left: 0;
         transition: width 0.3s ease; /* Smooth transition for resizing */
+        margin: 0; /* Ensure no margin on the bar */
+        padding: 0; /* Ensure no padding on the bar */
     }
 </style>
 
