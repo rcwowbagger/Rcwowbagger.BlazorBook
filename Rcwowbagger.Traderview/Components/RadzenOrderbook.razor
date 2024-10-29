@@ -12,7 +12,8 @@
                 <RadzenDataGridColumn TItem="Order" Property="Quantity" Title="Quantity" />
                 <RadzenDataGridColumn TItem="Order" Title="Volume">
                     <Template Context="order">
-                        <RadzenProgressBar @bind-Value="order.VolumePercent" Style="background-color: #66ff66;" Max="100" />
+                        <ResizableBar BackgroundColor="#ff6666" BarColor="#ffeeee" @bind-value=@(order.VolumePercent) IsReversed="true" />
+                        @* <RadzenProgressBar @bind-Value="order.VolumePercent" Style="background-color: #66ff66;" Max="100" ShowValue="false" /> *@
                     </Template>
                 </RadzenDataGridColumn>
             </Columns>
@@ -26,7 +27,8 @@
             <Columns>
                 <RadzenDataGridColumn TItem="Order" Title="Volume">
                     <Template Context="order">
-                        <RadzenProgressBar @bind-Value="order.VolumePercent" Style="background-color: #ff6666;" Max="100" />
+                        <ResizableBar BackgroundColor="#ffeeee" BarColor="#ff6666" @bind-value=@(order.VolumePercent) IsReversed="false " />
+                        @* <RadzenProgressBar @bind-Value="order.VolumePercent" Style="background-color: #ffffff; " Max="100" ProgressBarStyle="ProgressBarStyle.Base" ShowValue="false" /> *@
                     </Template>
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="Order" Property="Quantity" Title="Quantity" />
