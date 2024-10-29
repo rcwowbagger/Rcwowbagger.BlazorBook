@@ -1,0 +1,43 @@
+﻿<div class="resizable-bar-container" style="background-color:@BackgroundColor;">
+    <div class="resizable-bar" style="width:@Value%; background-color:@BarColor;@(IsReversed ? " right: 0;" : "")"></div>
+</div>
+
+<style>
+    .resizable-bar-container {
+        width: 100%;
+        height: 25px; /* Default height; can adjust if needed */
+        position: relative;
+        overflow: hidden;
+        border-radius: 0;
+        padding: 0; /* Remove any default padding */
+        margin: 0; /* Remove any default margin */
+    }
+
+    .resizable-bar {
+        height: 100%;
+        position: absolute;
+        left: 0;
+        transition: width 0.3s ease; /* Smooth transition for resizing */
+        margin: 0; /* Ensure no margin on the bar */
+        padding: 0; /* Ensure no padding on the bar */
+    }
+</style>
+
+@code {
+    [Parameter] public double Value { get; set; } = 50; // Value as a percentage (0 to 100)
+    [Parameter] public string BarColor { get; set; } = "#66ff66"; // Default bar color (green)
+    [Parameter] public string BackgroundColor { get; set; } = "#f0f0f0"; // Default background color
+    [Parameter] public bool IsReversed { get; set; } = false; // Reverse the bar direction if true
+
+    // EventCallback to enable two-way binding
+    [Parameter] public EventCallback<double> ValueChanged { get; set; }
+
+    private async Task SetValue(double newValue)
+    {
+        if (newValue != Value)
+        {
+            Value = newValue;
+            await ValueChanged.InvokeAsync(newValue); // Notify parent component of change
+        }
+    }
+}
